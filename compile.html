@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ WebAssembly Runner</title>
+</head>
+<body>
+    <h1>C++ WebAssembly Runner</h1>
+    <textarea id="code">// C++ code goes here</textarea>
+    <button onclick="runCppCode()">Run Code</button>
+    <div id="output">Output will appear here...</div>
+
+    <script src="hello.js"></script>
+    <script>
+        let Module = {
+            onRuntimeInitialized: function () {
+                console.log("C++ runtime initialized.");
+            }
+        };
+
+        function runCppCode() {
+            const outputElement = document.getElementById("output");
+            outputElement.innerHTML = "Running C++ Code...";
+
+            // Call the C++ main function from WebAssembly
+            Module.onRuntimeInitialized = function() {
+                const result = Module._main(); // Calls the C++ main function
+                outputElement.innerHTML = `Output: ${result}`;
+            };
+        }
+    </script>
+</body>
+</html>

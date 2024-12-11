@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Track</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f3e5f5, #e1bee7);
+            color: #333;
+        }
+
+        header {
+            background-color: #673ab7;
+            color: white;
+            padding: 3rem;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+            color: #e8f5e9;
+        }
+
+        .content {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .section {
+            margin-bottom: 2rem;
+            padding: 2rem;
+            background: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .section img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1rem;
+        }
+
+        .section h2 {
+            font-size: 1.8rem;
+            color: #4caf50;
+            margin-bottom: 1rem;
+        }
+
+        .section p {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .video-section {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .video-section iframe {
+            width: 80%;
+            height: 450px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: #673ab7;
+            color: white;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        footer a {
+            color: #ffcc80;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+ button {
+            padding: 10px 20px;
+            background-color: #673ab7;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        button:hover {
+            background-color: #673ab7;
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Advanced Track</h1>
+        <p>Master advanced programming concepts and take your Python skills to the next level.</p>
+    </header>
+
+    <div class="content">
+        <!-- Object-Oriented Programming Section -->
+        <div class="section">
+            <h2><center>Object-Oriented Programming (OOP)</center></h2>
+            <center><img src="oops_python.jpg" alt="OOP Concepts"></center>
+            <p>Object-Oriented Programming (OOP) is a paradigm that organizes code into classes and objects. It helps in designing modular and reusable code.</p>
+            <p>Core OOP Concepts:</p>
+            <ul>
+                <li><strong>Classes and Objects:</strong> A class is a blueprint, and an object is an instance of that class.</li>
+                <li><strong>Encapsulation:</strong> Bundling data and methods into a single unit.</li>
+                <li><strong>Inheritance:</strong> Allowing a class to derive properties and methods from another class.</li>
+                <li><strong>Polymorphism:</strong> Methods in different classes can have the same name but behave differently.</li>
+            </ul>
+            <p>Example:</p>
+            <pre>
+class Vehicle:
+    def __init__(self, name, max_speed):
+        self.name = name
+        self.max_speed = max_speed
+
+    def display(self):
+        print(f"Vehicle: {self.name}, Speed: {self.max_speed} km/h")
+
+class Car(Vehicle):
+    def __init__(self, name, max_speed, doors):
+        super().__init__(name, max_speed)
+        self.doors = doors
+
+    def display(self):
+        print(f"Car: {self.name}, Speed: {self.max_speed} km/h, Doors: {self.doors}")
+
+car = Car("Tesla", 200, 4)
+car.display()
+            </pre>
+        </div>
+        <div class="video-section">
+            <h2><center>Watch this video on Python merge sort</center></h2>
+            <center>
+                <video controls width="80%" height="450px">
+                    <source src="merge-sort-in-python-explained-with-example-and-code-1080-publer.io.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </center>
+        </div>
+        <!-- Algorithms Section -->
+        <div class="section">
+            <h2><center>Algorithms</center></h2>
+            <center><img src="algorithms_python.jpg" alt="Algorithms"></center>
+            <p>Learn and implement algorithms to solve complex problems efficiently. Understanding sorting, searching, and recursion is essential.</p>
+            <ul>
+                <li><strong>Sorting:</strong> Algorithms like Quick Sort, Merge Sort, and Bubble Sort.</li>
+                <li><strong>Searching:</strong> Binary Search and Linear Search.</li>
+                <li><strong>Recursion:</strong> Solving problems by breaking them into smaller sub-problems.</li>
+            </ul>
+            <p>Example: Merge Sort</p>
+            <pre>
+def merge_sort(arr):
+    if len(arr) > 1:
+        mid = len(arr) // 2
+        left = arr[:mid]
+        right = arr[mid:]
+
+        merge_sort(left)
+        merge_sort(right)
+
+        i = j = k = 0
+        while i < len(left) and j < len(right):
+            if left[i] < right[j]:
+                arr[k] = left[i]
+                i += 1
+            else:
+                arr[k] = right[j]
+                j += 1
+            k += 1
+
+        while i < len(left):
+            arr[k] = left[i]
+            i += 1
+            k += 1
+
+        while j < len(right):
+            arr[k] = right[j]
+            j += 1
+            k += 1
+arr = [38, 27, 43, 3, 9, 82, 10]
+merge_sort(arr)
+print(arr)
+            </pre>
+        </div>
+        <div class="video-section">
+            <h2><center>Watch this video on Python Syntax Basics</center></h2>
+            <center>
+                <video controls width="80%" height="450px">
+                    <source src="45-python-tutorial-for-beginners-modules-1080-publer.io.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </center>
+        </div>
+
+        <!-- Advanced Data Structures -->
+        <div class="section">
+            <h2><center>Advanced Data Structures</center></h2>
+            <center><img src="advanced_data_structures_python.jpg" alt="Data Structures"></center>
+            <p>Gain mastery over advanced data structures like trees, graphs, heaps, and hashmaps to handle data efficiently.</p>
+            <ul>
+                <li><strong>Binary Trees:</strong> Hierarchical structures for quick searches.</li>
+                <li><strong>Graphs:</strong> Useful for network modeling.</li>
+                <li><strong>Heaps:</strong> Efficient for priority queues.</li>
+                <li><strong>Hashmaps:</strong> Fast key-value lookups.</li>
+            </ul>
+            <p>Example: Graph Representation</p>
+            <pre>
+class Graph:
+    def __init__(self):
+        self.graph = {}
+
+    def add_edge(self, u, v):
+        if u not in self.graph:
+            self.graph[u] = []
+        self.graph[u].append(v)
+
+    def display(self):
+        for node in self.graph:
+            print(f"{node} -> {', '.join(map(str, self.graph[node]))}")
+
+g = Graph()
+g.add_edge(0, 1)
+g.add_edge(0, 2)
+g.add_edge(1, 2)
+g.add_edge(2, 0)
+g.add_edge(2, 3)
+g.add_edge(3, 3)
+g.display()
+            </pre>
+        </div>
+        <div class="video-section">
+            <h2><center>Watch this video on Python Syntax Basics</center></h2>
+            <center>
+                <video controls width="80%" height="450px">
+                    <source src="videoplayback.1733843317656.publer.io.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </center>
+        </div>
+
+        <div class="section">
+            <h2><center>Practice Programs</center></h2>
+            <center>
+                <img src="https://images.unsplash.com/photo-1505685296765-3a2736de412f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600" alt="Practice Programs">
+            </center>
+            <p>
+                <strong>Advanced:</strong><br>
+                1. Implement a Python program to solve the **N-Queens problem** using backtracking.<br>
+                2. Write a function to compute the shortest path between two nodes in a graph using **Dijkstra's algorithm**.<br>
+                3. Implement a **merge sort algorithm** to sort a list of numbers.<br>
+                4. Write a program that uses `itertools` to generate all permutations of a given list and count how many permutations satisfy a certain condition.<br>
+                5. Create a module that provides custom decorators for logging the execution time of functions and for validating input data.<br>
+                6. Build a program that uses `collections` to find the most common words in a given text file.<br>
+                7. Write a Python class for a **binary tree** and implement functions for **inorder**, **preorder**, and **postorder traversals**.<br>
+                8. Develop a program to implement **dynamic programming** for solving the **Longest Common Subsequence (LCS)** problem.<br>
+            </p>
+        </div>
+        <div class="compile-section">
+    <center>
+        <h2>Compile Your Code</h2>
+        <p>Click the button below to test and compile your Python code online:</p>
+        <a href="compile_code_python.html" target="_blank">
+            <button >Compile My Code</button>
+        </a>
+    </center>
+<div class="compile-section">
+<center>
+<h2>Go back to home page</h2>
+<a href="python.html">
+<button>Go Back to Home</button>
+</a>
+</center>
+</div>
+
+
+    <footer>
+        <p>© 2024 Python Course. All Rights Reserved. | <a href="index.html">Go Back to Home</a></p>
+    </footer>
+</body>
+</html>

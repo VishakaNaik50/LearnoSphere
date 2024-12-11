@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - LearnoSphere</title>
+    <style>
+        /* Reset and base styling */
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #fdfbfb, #ebedee);
+            color: #333;
+            animation: gradientBG 10s infinite alternate;
+        }
+
+        @keyframes gradientBG {
+            0% {
+                background: linear-gradient(135deg, #fdfbfb, #ebedee);
+            }
+            50% {
+                background: linear-gradient(135deg, #f8e2cf, #ffd3e3);
+            }
+            100% {
+                background: linear-gradient(135deg, #cfd9df, #e2ebf0);
+            }
+        }
+
+        /* Header styles */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background: linear-gradient(to right, #ff7eb3, #ff758c);
+            color: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header .logo {
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .header nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .header nav ul li {
+            margin: 0 15px;
+        }
+
+        .header nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .header nav ul li a:hover {
+            color: #ffecd2;
+        }
+
+        /* Courses section */
+        .courses {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .courses h2 {
+            font-size: 2.8rem;
+            margin-bottom: 30px;
+            color: #ff758c;
+            text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .course-category {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .course-card {
+            background: linear-gradient(145deg, #ffffff, #e3e8ec);
+            border: 1px solid #ff758c;
+            border-radius: 15px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+            width: 270px;
+            margin: 15px;
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .course-card:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .course-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-bottom: 3px solid #ff758c;
+        }
+
+        .course-card .content {
+            padding: 20px;
+            animation: fadeIn 1s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .course-card h3 {
+            font-size: 1.8rem;
+            color: #ff758c;
+            margin: 10px 0;
+        }
+
+        .course-card p {
+            color: #555;
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+
+        .course-card button {
+            background: linear-gradient(to right, #ff758c, #ff7eb3);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+        }
+
+        .course-card button:hover {
+            background: linear-gradient(to right, #ff7eb3, #ff758c);
+            transform: scale(1.1);
+        }
+
+        /* Footer styles */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(to right, #ff7eb3, #ff758c);
+            color: white;
+        }
+
+        .footer p {
+            margin: 0;
+            font-size: 1.1rem;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .courses h2 {
+                font-size: 2.2rem;
+            }
+
+            .course-category {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .course-card {
+                width: 90%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">LearnoSphere</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="quizzes.html">Quizzes</a></li>
+                <li><a href="puzzel/puzzell.html">Speed Typing</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Courses Section -->
+    <section class="courses">
+        <h2>Choose a Course to Learn</h2>
+
+        <div class="course-category">
+            <!-- Python Course Card -->
+            <div class="course-card">
+                <img src="img/python.jpeg" alt="Python Course">
+                <div class="content">
+                    <h3>Python Programming</h3>
+                    <p>Master Python programming with hands-on lessons, quizzes, and projects.</p>
+                    <button onclick="window.location.href='python/python.html'">Start Learning</button>
+                </div>
+            </div>
+
+            <!-- Java Course Card -->
+            <div class="course-card">
+                <img src="img/java1.jpeg" alt="Java Course">
+                <div class="content">
+                    <h3>Java</h3>
+                    <p>Learn Java programming and build versatile applications.</p>
+                    <button onclick="window.location.href='java.html'">Start Learning</button>
+                </div>
+            </div>
+
+            <!-- C++ Course Card -->
+            <div class="course-card">
+                <img src="img/c++.jpeg" alt="C++ Course">
+                <div class="content">
+                    <h3>C++</h3>
+                    <p>Get started with C++ and learn programming fundamentals.</p>
+                    <button onclick="window.location.href='c++/c++course.html'">Start Learning</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 LearnoSphere. All rights reserved.</p>
+    </footer>
+</body>
+</html>

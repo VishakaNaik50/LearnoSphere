@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - LearnoSphere</title>
+    <style>
+        /* Reset and Base Styling */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(180deg, #f4f4f4 30%, #ffffff 100%);
+        }
+
+        /* Header Styles */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background: linear-gradient(45deg, #0e76a8, #3bffd8);
+            color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .header .logo {
+            font-size: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .header nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .header nav ul li {
+            margin: 0 15px;
+        }
+
+        .header nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            transition: transform 0.3s, color 0.3s;
+        }
+
+        .header nav ul li a:hover {
+            color: #f9dc5c; /* Bright Yellow */
+            transform: scale(1.2);
+        }
+
+        /* About Section Styles */
+        .about-section {
+            padding: 4px 4px;
+            text-align: center;
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+            color: white;
+            border-bottom: 5px solid #0e76a8;
+        }
+
+        .about-section h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .about-section p {
+            font-size: 1.5rem;
+            max-width: 900px;
+            margin: 20px auto;
+        }
+
+        /* Mission Section Styles */
+        .mission {
+            background: url('img/aboutback.jpg') no-repeat center center / cover;
+            padding: 300px 20px;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .mission::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .mission h2,
+        .mission p {
+            position: relative;
+            z-index: 2;
+        }
+
+        .mission h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .mission p {
+            font-size: 1.5rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* Features Section Styles */
+        .features {
+            margin-top: 50px;
+            padding: 50px 20px;
+            background: linear-gradient(180deg, #ffffff, #FFFAE3);
+        }
+
+        .features h2 {
+            font-size: 3rem;
+            margin-bottom: 30px;
+            color: #0e76a8;
+        }
+
+        .features .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .feature {
+            background: linear-gradient(135deg, #FF4500, #FFD700);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+        }
+
+        .feature img {
+            width: 200px;
+            height: 200px;
+            margin-bottom: 20px;
+            border-radius: 50%;
+            border: 5px solid white;
+        }
+
+        .feature h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .feature p {
+            font-size: 1.2rem;
+        }
+
+        .feature:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Footer Styles */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(45deg, #0e76a8, #3bffd8);
+            color: white;
+            border-top: 5px solid #FFD700;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .about-section h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-section p {
+                font-size: 1.2rem;
+            }
+
+            .mission h2 {
+                font-size: 2rem;
+            }
+
+            .mission p {
+                font-size: 1.2rem;
+            }
+
+            .features h2 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">LearnoSphere</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="registration.html">Register</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="puzzel/puzzell.html">Speed Typing</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <h1>About LearnoSphere</h1>
+        <p>At LearnoSphere, we believe in empowering learners through interactive and engaging online education. Our platform provides a wide range of courses designed to help individuals develop new skills, enhance their knowledge, and achieve their goals. Join us to start your learning journey today!</p>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission">
+        <h2>Our Mission</h2>
+        <p>Our mission is to provide accessible, high-quality education that is tailored to the needs of each learner. We aim to bridge the gap between education and technology, offering an interactive learning experience that adapts to the pace of the student. Together, we are creating a smarter, more skilled future.</p>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <h2>Our Key Features</h2>
+        <div class="feature-grid">
+            <div class="feature">
+                <img src="img/interactive.jpeg" alt="Interactive Learning">
+                <h3>Interactive Learning</h3>
+                <p>Our courses include interactive content such as videos, quizzes, and assignments to keep learners engaged and motivated.</p>
+            </div>
+            <div class="feature">
+                <img src="img/playing.jpg" alt="Progress Tracking">
+                <h3>Progress Tracking</h3>
+                <p>Track your learning progress and receive real-time feedback to ensure you're on the right path.</p>
+            </div>
+            <div class="feature">
+                <img src="img/3rd.jpeg" alt="Expert Instructors">
+                <h3>Expert Instructors</h3>
+                <p>Learn from industry experts and qualified educators who bring real-world experience to each course.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 LearnoSphere. All rights reserved.</p>
+    </footer>
+</body>
+</html>

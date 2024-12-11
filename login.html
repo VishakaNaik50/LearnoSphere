@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - LearnoSphere</title>
+    <style>
+        /* Background Gradient */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(45deg, #8A2BE2, #4B0082);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Centering the form */
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        h2 {
+            text-align: center;
+            color: #4B0082;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 5px #000;
+        }
+
+        /* Form Fields */
+        label {
+            font-size: 1rem;
+            margin-bottom: 8px;
+            display: block;
+            color: #333;
+        }
+
+        input[type="email"], input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease-in-out;
+        }
+
+        input[type="email"]:focus, input[type="password"]:focus {
+            border-color: #4B0082;
+            outline: none;
+        }
+
+        /* Button Styling */
+        input[type="submit"] {
+            background-color: #4B0082;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            width: 100%;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #8A2BE2;
+        }
+
+        /* Link Styling */
+        p {
+            text-align: center;
+        }
+
+        a {
+            color: #4B0082;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hover effect for the form container */
+        .form-container:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        /* Animation for the form elements */
+        .form-container {
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Login to Your Account</h2>
+        <form action="login.jsp" method="post">
+            <label for="email">Email:</label>
+            <input type="email" name="email" required><br><br>
+
+            <label for="password">Password:</label>
+            <input type="password" name="password" required><br><br>
+
+            <input type="submit" value="Login">
+        </form>
+
+        <p>Don't have an account? <a href="registration.html">Register here</a>.</p>
+    </div>
+
+</body>
+</html>

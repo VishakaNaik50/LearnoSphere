@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Course</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #fef3f0, #e0f7fa, #fff3e0);
+            color: #333;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            font-size: 1.4rem;
+            margin-top: 1rem;
+            color: #e0e0e0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: #ff5722;
+            margin-bottom: 2rem;
+        }
+
+        .tracks {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        /* Card Styling */
+        .track {
+            width: 320px;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            border-radius: 15px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.4s ease;
+        }
+
+        .track:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .track img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .track-content {
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #c3cfe2, #e2ebf0);
+        }
+
+        .track-content h3 {
+            margin: 0;
+            font-size: 1.8rem;
+            color: #4e4e4e;
+        }
+
+        .track-content p {
+            margin: 0.7rem 0 0;
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        footer {
+            margin-top: 3rem;
+            text-align: center;
+            padding: 2rem 0;
+            background: linear-gradient(135deg, #ff8c00, #ffa07a);
+            color: white;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        footer a {
+            color: #ffeb3b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Add a floating animation for hover */
+        .track:hover {
+            animation: float 1s ease-in-out infinite alternate;
+        }
+
+        @keyframes float {
+            from {
+                transform: translateY(0px);
+            }
+            to {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the C++ Course</h1>
+        <p>Learn C++ through structured and interactive tracks</p>
+    </header>
+
+    <div class="container">
+        <h2>Course Tracks</h2>
+        <div class="tracks">
+            <!-- Beginner Track -->
+            <div class="track" onclick="redirectToPage('beginner1.html')">
+                <img src="c++.jfif" alt="Beginner Track">
+                <div class="track-content">
+                    <h3>Beginner Track</h3>
+                    <p>Learn C++ basics: syntax, variables, and loops.</p>
+                </div>
+            </div>
+
+            <!-- Intermediate Track -->
+            <div class="track" onclick="redirectToPage('intermediate.html')">
+                <img src="intermediate.jfif" alt="Intermediate Track">
+                <div class="track-content">
+                    <h3>Intermediate Track</h3>
+                    <p>Build on your C++ knowledge with functions and modules.</p>
+                </div>
+            </div>
+
+            <!-- Advanced Track -->
+            <div class="track" onclick="redirectToPage('advnce.html')">
+                <img src="advanced.jfif" alt="Advanced Track">
+                <div class="track-content">
+                    <h3>Advanced Track</h3>
+                    <p>Master advanced concepts: OOP, algorithms, and more.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 C++ Course. All Rights Reserved. | <a href="#">Contact Us</a></p>
+    </footer>
+
+    <script>
+        // JavaScript function to handle redirection
+        function redirectToPage(page) {
+            window.location.href = page;
+        }
+    </script>
+</body>
+</html>

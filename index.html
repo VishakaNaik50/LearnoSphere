@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnoSphere</title>
+    <style>
+        /* Reset and Base Styling */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+        }
+
+        /* Header Styling */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background: linear-gradient(45deg, #FF7F50, #FF6347); /* Coral to Tomato gradient */
+            color: #fff;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .header .logo {
+            font-size: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .header nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .header nav ul li {
+            margin: 0 15px;
+        }
+
+        .header nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+            transition: transform 0.3s, color 0.3s;
+        }
+
+        .header nav ul li a:hover {
+            color: #FFFF00; /* Bright Yellow */
+            transform: scale(1.2);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('img/homeback.jpeg') no-repeat center center / cover;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            padding: 20px;
+            box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin: 0;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: 1.8rem;
+            margin: 20px 0;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 50px 20px;
+            text-align: center;
+            background: #FFFAE3; /* Light yellow background */
+        }
+
+        .features h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #FF4500; /* OrangeRed */
+        }
+
+        .features .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .feature {
+            background: linear-gradient(45deg, #FFD700, #FFA500); /* Gold to Orange */
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+            color: #fff;
+        }
+
+        .feature h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .feature p {
+            font-size: 1.1rem;
+        }
+
+        .feature:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Footer Section */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(45deg, #20B2AA, #00CED1); /* LightSeaGreen to DarkTurquoise */
+            color: #fff;
+            box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .footer p {
+            margin: 0;
+            font-size: 1.1rem;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">LearnoSphere</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About US</a></li>
+                <li><a href="registration.html">Register</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Welcome to LearnoSphere</h1>
+        <p>Unlock the potential of knowledge with our curated courses and engaging quizzes.</p>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <h2>Why Choose Us?</h2>
+        <div class="feature-grid">
+            <div class="feature">
+                <h3>Interactive Courses</h3>
+                <p>Explore a wide range of topics with hands-on lessons and exercises.</p>
+            </div>
+            <div class="feature">
+                <h3>Challenging Quizzes</h3>
+                <p>Test your knowledge with fun and challenging quizzes.</p>
+            </div>
+            <div class="feature">
+                <h3>Progress Tracking</h3>
+                <p>Monitor your learning journey and celebrate your milestones.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 LearnoSphere. All rights reserved.</p>
+    </footer>
+</body>
+</html>

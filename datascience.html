@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Courses - LearnoSphere</title>
+    <style>
+        /* Same styles as the main page, you can add extra styling specific to the course page */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background-color: #0e76a8; /* Light blue */
+            color: rgb(149, 4, 72);
+        }
+
+        .header .logo {
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .header nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .header nav ul li {
+            margin: 0 15px;
+        }
+
+        .header nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+        }
+
+        .header nav ul li a:hover {
+            color: #f9dc5c;
+        }
+
+        /* Styling for video section */
+        .courses {
+            margin: 20px auto;
+            max-width: 1200px;
+            padding: 0 20px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #333;
+            font-size: 32px;
+        }
+
+        .course-video {
+            margin: 20px 0;
+            background: #e1e1e1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 8px;
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .course-video video {
+            width: 100%;  /* Make the video take full width */
+            max-width: 100%; /* Remove the limit to the video width */
+            height: 500px; /* Set a fixed height for the video */
+            object-fit: cover; /* Keep the aspect ratio and fill the container */
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Added shadow to video for effect */
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: #0e76a8;
+            color: white;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">LearnoSphere</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="quizzes.html">Quizzes</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Python Course Videos -->
+    <section class="courses">
+        <h2>Python Courses</h2>
+        <!-- Python Videos -->
+        <div class="course-video">
+            <video controls>
+                <source src="videos/python_1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <div class="course-video">
+            <video controls>
+                <source src="videos/python_2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <div class="course-video">
+            <video controls>
+                <source src="videos/python_3.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <div class="course-video">
+            <video controls>
+                <source src="videos/python_4.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <h1>Python Basics</h1>
+        <div class="course-video">
+            
+            <video controls>
+                <source src="videos/python_5.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 LearnoSphere. All rights reserved.</p>
+    </footer>
+</body>
+</html>

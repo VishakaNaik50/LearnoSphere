@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced C++ Track</title>
+    <style>
+     body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #d1c4e9, #10adc2);
+    color: #333;
+}
+
+header {
+    background: linear-gradient(135deg, #7e57c2, #ab47bc);
+    color: white;
+    padding: 3rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3rem;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+header p {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+    color: #e1f5fe;
+}
+
+.content {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section {
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background: #f3f4f6;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease;
+}
+
+.section:hover {
+    background: #e1f5fe;
+}
+
+.section img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+    margin-bottom: 1rem;
+    margin-left: 200px;
+}
+
+.section img:hover {
+    transform: scale(1.05);
+}
+
+.section h2 {
+    font-size: 2rem;
+    color: #7e57c2;
+    margin-bottom: 1rem;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.section p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.video-section {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.video-section iframe {
+    width: 80%;
+    height: 450px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.video-section iframe:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, #7e57c2, #ab47bc);
+    color: white;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer a {
+    color: #80deea;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Button Styling */
+button {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #7e57c2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #ab47bc;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button:focus {
+    outline: none;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Advanced C++ Track</h1>
+        <p>Master advanced C++ techniques including multithreading, complex data structures, and more.</p>
+    </header>
+
+    <div class="content">
+        <!-- Multithreading Section -->
+        <div class="section">
+            <h2>Multithreading in C++</h2>
+            <img src="multithreadc++.jfif" alt="Multithreading">
+            <p>Learn how to write efficient programs that run multiple tasks concurrently using multithreading in C++.</p>
+            <p><strong>1. Threads:</strong><br>A thread is the smallest unit of execution within a program. C++ provides <code>std::thread</code> to create and manage threads.</p>
+            <p><strong>2. Synchronization:</strong><br>When multiple threads access shared data, synchronization is crucial to prevent data corruption. C++ provides mechanisms like <code>mutexes</code> and <code>condition variables</code> for this purpose.</p>
+            <p><strong>3. Thread Safety:</strong><br>Ensure thread safety by using thread synchronization tools like <code>mutex</code>, <code>lock_guard</code>, and <code>unique_lock</code> in C++.</p>
+        </div>
+
+        <div class="video-section">
+            <h2>Watch this video on Multithreading</h2>
+            <iframe src="c:\Users\dell\Downloads\build-your-first-multithreaded-application-introduction-to-multithreading-in-modern-c-1080-publer.io.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <!-- Advanced Data Structures Section -->
+        <div class="section">
+            <h2>Advanced Data Structures</h2>
+            <img src="datastructurec++.jfif" alt="Advanced Data Structures">
+            <p>Deep dive into complex data structures such as trees, graphs, and hash tables in C++.</p>
+            <p><strong>1. Trees:</strong><br>Learn about binary trees, binary search trees (BST), and tree traversal algorithms like pre-order, in-order, and post-order.</p>
+            <p><strong>2. Graphs:</strong><br>Explore graph representations like adjacency lists and matrices, and algorithms like DFS (Depth-First Search) and BFS (Breadth-First Search).</p>
+            <p><strong>3. Hash Tables:</strong><br>Implement hash tables to quickly store and retrieve data using a hashing function. Learn about collision resolution techniques.</p>
+        </div>
+
+        <div class="video-section">
+            <h2>Watch this video on Advanced Data Structures</h2>
+            <iframe src="c:\Users\dell\Downloads\videoplayback.1733841207648.publer.io.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <!-- Memory Management Section -->
+        <div class="section">
+            <h2>Memory Management and Optimization</h2>
+            <img src="memoryc++.jfif" alt="Memory Management">
+            <p>Learn about dynamic memory allocation, memory leaks, and how to optimize memory usage in C++.</p>
+            <p><strong>1. Dynamic Memory Allocation:</strong><br>Use <code>new</code> and <code>delete</code> operators to allocate and deallocate memory on the heap.</p>
+            <p><strong>2. Smart Pointers:</strong><br>C++11 introduced smart pointers like <code>std::unique_ptr</code> and <code>std::shared_ptr</code> to manage dynamic memory more safely and efficiently.</p>
+            <p><strong>3. Memory Leaks:</strong><br>Learn how to detect and prevent memory leaks by using tools like <code>valgrind</code>.</p>
+        </div>
+
+        <div class="video-section">
+            <h2>Watch this video on Memory Management</h2>
+            <iframe src="c:\Users\dell\Downloads\c-memory-management-basics-c-memory-management-best-practices-c-tutorial-simplilearn-1080-publer.io.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <!-- Complex Algorithms Section -->
+        <div class="section">
+            <h2>Complex Algorithms and Optimization</h2>
+            <img src="complexc++.jfif" alt="Complex Algorithms">
+            <p>Learn how to optimize algorithms for performance and understand the theoretical aspects of algorithm design.</p>
+            <p><strong>1. Time Complexity:</strong><br>Understand the time complexity of algorithms using Big O notation. Learn how to optimize code for faster execution.</p>
+            <p><strong>2. Divide and Conquer:</strong><br>Master algorithms like merge sort and quicksort that use divide-and-conquer to improve efficiency.</p>
+            <p><strong>3. Greedy Algorithms:</strong><br>Explore algorithms that make locally optimal choices to find global solutions in problems like the knapsack problem.</p>
+        </div>
+
+        <div class="video-section">
+            <h2>Watch this video on Algorithm Optimization</h2>
+            <iframe src="c:\Users\dell\Downloads\class-complex-c-programming-1080-publer.io.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <!-- Advanced Programs Section -->
+        <div class="section">
+            <h2>Advanced C++ Projects</h2>
+            <img src="projectc++.jfif" alt="Advanced Projects">
+            <p>Work on real-world projects that require advanced C++ knowledge, such as building a text editor, file compression tool, or a multi-threaded server.</p>
+            <button onclick="window.location.href='https://www.programiz.com/cpp-programming/online-compiler/'">Open Compiler</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 C++ Course. All Rights Reserved. | <a href="index.html">Go Back to Home</a></p>
+    </footer>
+</body>
+</html>

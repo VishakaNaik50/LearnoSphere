@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intermediate Track</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f9f7d9, #ffe6b3);
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #ff9800, #ffc107);
+            color: white;
+            padding: 3rem;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+            color: #fff5e0;
+        }
+
+        .content {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .section {
+            margin-bottom: 2rem;
+            padding: 2rem;
+            background: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .section img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1rem;
+        }
+
+        .section h2 {
+            font-size: 1.8rem;
+            color: #ff9800;
+            margin-bottom: 1rem;
+        }
+
+        .section p {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .video-section {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .video-section iframe {
+            width: 80%;
+            height: 450px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: linear-gradient(135deg, #ff9800, #e65100);
+            color: white;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        footer a {
+            color: #ffcc80;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+ button {
+            padding: 10px 20px;
+            background: linear-gradient(135deg, #ff9800, #ffc107);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        button:hover {
+            background: linear-gradient(135deg, #ff9800, #ffc107);
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Intermediate Track</h1>
+        <p>Advance your Python knowledge with functions, modules, and more.</p>
+    </header>
+
+    <div class="content">
+        <!-- Functions Section -->
+        <div class="section">
+            <h2><center>Functions in Python</center></h2>
+            <center><img src="functions_in_python.jpg" alt="Functions"></center>
+            <p>Functions are reusable blocks of code that perform specific tasks. They help make programs modular and readable. Here's how you define and use a function:</p>
+            <pre>
+def greet(name):
+    return f"Hello, {name}!"
+
+# Calling the function
+message = greet("Alice")
+print(message)
+            </pre>
+            <p>Functions can also take default arguments, return multiple values, and use keyword arguments for flexibility.</p>
+        </div>
+        <div class="video-section">
+            <h2><center>Watch this video on Python Syntax Basics</center></h2>
+            <center>
+                <video controls width="80%" height="450px">
+                    <source src="functions-in-python-are-easy-1080-publer.io.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </center>
+        </div>
+        <!-- Modules Section -->
+        <div class="section">
+            <h2><center>Modules in Python</center></h2>
+            <center><img src="modules_in_python.jpg" alt="Modules"></center>
+            <p>Modules are files containing Python definitions and statements. They allow you to organize your code into manageable pieces. Use the <code>import</code> statement to use a module:</p>
+            <pre>
+# Importing a module
+import math
+
+# Using a function from the math module
+result = math.sqrt(16)
+print(result)  # Output: 4.0
+            </pre>
+            <p>You can also create your own modules by saving Python code in separate files.</p>
+        </div>
+        <div class="video-section">
+            <h2><center>Watch this video on Python Syntax Basics</center></h2>
+            <center>
+                <video controls width="80%" height="450px">
+                    <source src="45-python-tutorial-for-beginners-modules-1080-publer.io.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </center>
+        </div>
+
+        <!-- File Handling Section -->
+        <div class="section">
+            <h2><center>File Handling</center></h2>
+            <center><img src="file_handling_in_python.jpg" alt="File Handling"></center>
+            <p>Python makes it easy to read and write files. Use the <code>open()</code> function to work with files:</p>
+            <pre>
+# Writing to a file
+with open("example.txt", "w") as file:
+    file.write("Hello, Python!")
+
+# Reading from a file
+with open("example.txt", "r") as file:
+    content = file.read()
+    print(content)
+            </pre>
+            <p>Always use the <code>with</code> statement to ensure proper resource management.</p>
+        </div>
+        <div class="video-section">
+            <h2><center>Watch this video on Python Syntax Basics</center></h2>
+            <center>
+                <video controls width="80%" height="450px">
+                    <source src="python-file-handling-for-beginners-1080-publer.io.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </center>
+        </div>
+
+
+        <!-- Error Handling Section -->
+        <div class="section">
+            <h2><center>Error Handling</center></h2>
+            <center><img src="error_handling_python.jpg" alt="Error Handling"></center>
+            <p>Handle exceptions gracefully using <code>try</code>, <code>except</code>, and <code>finally</code> blocks:</p>
+            <pre>
+try:
+    result = 10 / 0
+except ZeroDivisionError as e:
+    print("Error:", e)
+finally:
+    print("Execution complete.")
+            </pre>
+            <p>This helps make your programs robust and user-friendly.</p>
+        </div>
+        <div class="video-section">
+            <h2><center>Watch this video on Python Syntax Basics</center></h2>
+            <center>
+                <video controls width="80%" height="450px">
+                    <source src="learn-python-exception-handling-in-5-minutes-1080-publer.io.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </center>
+        </div>
+
+        <!-- Practice Programs Section -->
+        <div class="section">
+            <h2><center>Practice Programs</center></h2>
+            <center><img src="https://images.unsplash.com/photo-1505685296765-3a2736de412f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600" alt="Practice Programs"></center>
+            <p>1. Write a Python function to find the factorial of a number.<br>
+2. Create a module with functions for addition, subtraction, multiplication, and division. Import and use it in another Python file.<br>
+3. Write a program to read a file and count the number of lines, words, and characters in it.<br>
+4. Handle exceptions for file not found and division by zero errors.<br></p>
+        </div>
+    </div>
+
+   <div class="compile-section">
+    <center>
+        <h2>Compile Your Code</h2>
+        <p>Click the button below to test and compile your Python code online:</p>
+        <a href="compile_code_python.html" target="_blank">
+            <button >Compile My Code</button>
+        </a>
+    </center>
+<div class="compile-section">
+<center>
+<h2>Go back to home page</h2>
+<a href="python.html">
+<button>Go Back to Home</button>
+</a>
+</center>
+</div>
+
+
+
+    <footer>
+        <p>© 2024 Python Course. All Rights Reserved. | <a href="index.html">Go Back to Home</a></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intermediate Track</title>
+    <style>
+        body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #d1c4e9, #10adc2);
+    color: #333;
+}
+
+header {
+    background: linear-gradient(135deg, #7e57c2, #ab47bc);
+    color: white;
+    padding: 3rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3rem;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+header p {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+    color: #e1f5fe;
+}
+
+.content {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section {
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background: #f3f4f6;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease;
+}
+
+.section:hover {
+    background: #e1f5fe;
+}
+
+.section img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+    margin-bottom: 1rem;
+    margin-left: 200px;
+}
+
+.section img:hover {
+    transform: scale(1.05);
+}
+
+.section h2 {
+    font-size: 2rem;
+    color: #7e57c2;
+    margin-bottom: 1rem;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.section p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.video-section {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.video-section iframe {
+    width: 80%;
+    height: 450px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.video-section iframe:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, #7e57c2, #ab47bc);
+    color: white;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer a {
+    color: #80deea;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Button Styling */
+button {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #7e57c2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #ab47bc;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button:focus {
+    outline: none;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Intermediate C++ Track</h1>
+        <p>Advance your programming skills with C++ through Object-Oriented Programming, file handling, and more.</p>
+    </header>
+
+    <div class="content">
+        <!-- Object-Oriented Programming Section -->
+        <div class="section">
+            <h2>Object-Oriented Programming (OOP)</h2>
+            <img src="img/objectorientredc++.png" alt="Object-Oriented Programming">
+            <p>Learn how to design and implement classes and objects in C++ using OOP principles such as inheritance, polymorphism, and encapsulation.</p>
+            <p><strong>1. Classes and Objects:</strong><br>A class is a blueprint for creating objects (instances). Objects are instances of a class that have properties (data members) and behaviors (member functions).</p>
+            <p><strong>2. Inheritance:</strong><br>Inheritance allows one class to inherit the properties and methods of another, facilitating code reuse.</p>
+            <p><strong>3. Polymorphism:</strong><br>Polymorphism allows different classes to define the same function in different ways (method overriding). C++ supports both compile-time and runtime polymorphism.</p>
+            <p><strong>4. Encapsulation:</strong><br>Encapsulation involves bundling data and methods that operate on the data into a single unit known as a class, with restricted access to its components.</p>
+        </div>
+
+        <div class="video-section">
+            <h2>Watch this video on Object-Oriented Programming</h2>
+            <iframe src="c:\Users\dell\Downloads\videoplayback.1733838430384.publer.io.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <!-- File Handling Section -->
+        <div class="section">
+            <h2>File Handling in C++</h2>
+            <img src="img/filehandling.jfif" alt="File Handling">
+            <p>Learn how to read from and write to files using file streams in C++.</p>
+            <p><strong>1. fstream:</strong><br>In C++, the <code>fstream</code> library provides functionality for file handling. It allows you to open, read, write, and close files.</p>
+            <p><strong>2. Opening Files:</strong><br>To open a file, use the <code>open()</code> function. You can specify if the file is to be opened in read, write, or append mode.</p>
+            <p><strong>3. File Operations:</strong><br>Use the <code>getline()</code> function to read lines from a file and the <code>write()</code> function to output data to a file.</p>
+        </div>
+
+        <div class="video-section">
+            <h2>Watch this video on File Handling</h2>
+            <iframe src="c:\Users\dell\Downloads\file-handling-in-c-programming-720-publer.io.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <!-- Templates Section -->
+        <div class="section">
+            <h2>Templates in C++</h2>
+            <img src="img/templetec++.jfif" alt="Templates">
+            <p>Templates allow you to write generic programs that can work with any data type.</p>
+            <p><strong>1. Function Templates:</strong><br>A function template defines a generic function that can operate on different data types without needing to overload functions.</p>
+            <p><strong>2. Class Templates:</strong><br>Class templates allow you to define a class blueprint that can handle multiple data types.</p>
+        </div>
+
+        <div class="video-section">
+            <h2>Watch this video on Templates in C++</h2>
+            <iframe src="c:\Users\dell\Downloads\c-templates-must-for-competitive-programming-c-tutorials-for-beginners-63-1080-publer.io.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <!-- Advanced Programs Section -->
+        <div class="section">
+            <h2>Intermediate Programs</h2>
+            <img src="img/intermediateprog.jfif" alt="Intermediate Programs">
+            <p>Explore more complex programs such as File Parsing, Data Structures Implementation (e.g., Linked Lists), and Multithreading.</p>
+            <button onclick="window.location.href='https://www.programiz.com/cpp-programming/online-compiler/'">Open Compiler</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 C++ Course. All Rights Reserved. | <a href="index.html">Go Back to Home</a></p>
+    </footer>
+</body>
+</html>

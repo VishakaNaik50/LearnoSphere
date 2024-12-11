@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beginner Track</title>
+    <style>
+       body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #d1c4e9, #10adc2);
+    color: #333;
+}
+
+header {
+    background: linear-gradient(135deg, #7e57c2, #ab47bc);
+    color: white;
+    padding: 3rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3rem;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+header p {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+    color: #e1f5fe;
+}
+
+.content {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section {
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background: #f3f4f6;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease;
+}
+
+.section:hover {
+    background: #e1f5fe;
+}
+
+.section img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+    margin-bottom: 1rem;
+    margin-left: 200px;
+}
+
+.section img:hover {
+    transform: scale(1.05);
+}
+
+.section h2 {
+    font-size: 2rem;
+    color: #7e57c2;
+    margin-bottom: 1rem;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.section p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.video-section {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.video-section iframe {
+    width: 80%;
+    height: 450px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.video-section iframe:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, #7e57c2, #ab47bc);
+    color: white;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer a {
+    color: #80deea;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Button Styling */
+button {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #7e57c2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #ab47bc;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button:focus {
+    outline: none;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Beginner Track</h1>
+        <p>Learn C++ basics to kickstart your programming journey.</p>
+    </header>
+
+    <div class="content">
+        <!-- C++ Syntax Basics Section -->
+        <div class="section">
+            <h2>C++ Syntax Basics</h2>
+            <img src="syntax.jfif" alt="Syntax Basics">
+            <p>Understand the basics of C++ syntax, including the use of semicolons, comments, and the structure of a C++ program. This is the foundation for writing efficient and readable C++ code.</p>
+            <p><strong>1. Comments:</strong><br>In C++, comments serve the same purpose as in Python: explaining code or making notes for better readability. C++ supports two types of comments:<br><strong>Single-line comments:</strong> Start with //. <br><strong> Multi-line comments:</strong> Enclosed within /* */.</p>
+            <p><strong>2. Indentation:</strong><br>In C++, indentation improves code readability but is not enforced by the compiler. Blocks of code are defined using curly braces {}, not indentation. However, consistent indentation is a best practice.</p>
+            <img src="bas.jpg" alt="basic c++ code">
+        </div>
+
+        <!-- Video Section -->
+        <div class="video-section">
+            <h2>Watch this video on C++ Syntax Basics</h2>
+            <iframe src="c:\Users\dell\Downloads\basic-c-syntax-explained-simply-1440-publer.io.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <!-- Variables and Data Types Section -->
+        <div class="section">
+            <h2>Variables and Data Types</h2>
+            <img src="data.png" alt="Variables and Data Types">
+            <p>Learn how to declare variables and explore C++'s core data types, such as int (integers), float (floating-point numbers), string (text), and bool (true/false)</p><br>
+            <p><strong>Variables:</strong><br>A variable in C++ is a storage location in memory with a specific name and type, used to hold data that can be manipulated during the execution of a program.<br><strong> Syntax: </strong><br>data_type variable_name = value;<br><strong>Example:</strong> int age = 25;</p>
+        </div>
+        <div class="video-section">
+            <h2>Watch this video on Variables and Data Types</h2>
+            <iframe src="c:\Users\dell\Downloads\learn-c-with-me-3-data-types-and-variables-1440-publer.io.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <!-- Control Structures Section -->
+        <div class="section">
+            <h2>Control Structures</h2>
+            <img src="control.jfif" alt="Control Structures">
+            <p>Master the use of conditionals (if, elif, else) and loops (for, while) to control the flow of your programs effectively.</p><br>
+            <p><strong>1. Sequential Control Structure:</strong> Executes instructions one after the other in the order they are written.<br><strong> 2. Decision-Making Control Structures:</strong><br><strong>if Statement:</strong> Executes code if a condition is true.<br><strong>if-else Statement:</strong> Executes one block of code if a condition is true and another if it is false.<br> <strong>else-if Ladder:</strong> Tests multiple conditions in sequence.<br> <strong>switch Statement:</strong> Selects and executes one case out of multiple options based on a variable's value.<br><strong>3. Looping Control Structures:</strong><br><strong>for Loop:</strong> Executes a block of code a specific number of times.<br><strong>while Loop:</strong> Repeats a block of code as long as the condition is true.<br><strong>do-while Loop:</strong> Executes the block of code at least once before checking the condition.<br><strong>4. Jump Control Structures:</strong><br><strong>break:</strong> Terminates a loop or switch statement prematurely.<br><strong>continue:</strong> Skips the current iteration of a loop and proceeds to the next.<br><strong>goto:</strong> Transfers control to a labeled statement in the program.</p>
+        </div>
+        <div class="video-section">
+            <h2>Watch this video on Control Structures</h2>
+            <iframe src="c:\Users\dell\Downloads\control-structures-in-c-c-programming-tutorials-for-beginners-1080-publer.io.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <!-- Basic Programs Section -->
+        <div class="section">
+            <h2>Basic Programs</h2>
+            <img src="basic8.webp" alt="Basic Programs">
+            <p>Write simple C++ programs such as Odd or Even Checker, Prime Number Checker, Fibonacci Sequence, Palindrome Checker.</p>
+            <button onclick="window.location.href='https://www.programiz.com/cpp-programming/online-compiler/'">Open Compiler</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 C++ Course. All Rights Reserved. | <a href="index.html">Go Back to Home</a></p>
+    </footer>
+</body>
+</html>

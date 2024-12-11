@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intermediate Track</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f6d365, #fda085);
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #ff5722, #ff8a65);
+            color: white;
+            padding: 3rem;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+            color: #ffe6d8;
+        }
+
+        .content {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .section {
+            margin-bottom: 2rem;
+            padding: 2rem;
+            background: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .section img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1rem;
+            margin-left: 200px;
+        }
+
+        .section h2 {
+            font-size: 1.8rem;
+            color: #ff5722;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .section p {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .video-section {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .video-section iframe {
+            width: 80%;
+            height: 450px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: linear-gradient(135deg, #ff5722, #e64a19);
+            color: white;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        footer a {
+            color: #ffcc80;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Button Styling */
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #FF5722;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #E64A19;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        button:active {
+            transform: translateY(0);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        button:focus {
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Intermediate Track</h1>
+        <p>Dive deeper into Java concepts to advance your programming skills.</p>
+    </header>
+
+    <div class="content">
+        <!-- Object-Oriented Programming Section -->
+        <div class="section">
+            <h2>Object-Oriented Programming</h2>
+            <img src="img/opps.jpeg" alt="Object-Oriented Programming">
+            <p>Understand the principles of OOP such as encapsulation, inheritance, polymorphism, and abstraction. Learn to design reusable and efficient Java classes and objects.</p>
+        </div>
+        <div class="video-section">
+            <h2>Watch this video on OOP Concepts</h2>
+            <iframe src="vedios/opps.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <!-- Exception Handling Section -->
+        <div class="section">
+            <h2>Exception Handling</h2>
+            <img src="img/exceptionhandling.jpeg" alt="Exception Handling">
+            <p>Master how to handle runtime errors in Java using try-catch blocks, finally, and custom exceptions.</p>
+        </div>
+        <div class="video-section">
+            <h2>Watch this video on Exception Handling</h2>
+            <iframe src="vedios/exceptionHandling.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <!-- File Handling Section -->
+        <div class="section">
+            <h2>File Handling</h2>
+            <img src="img/filehandling.jpeg" alt="File Handling">
+            <p>Learn to read and write data to files using Java I/O streams, including FileReader, FileWriter, and BufferedReader.</p>
+        </div>
+        <div class="video-section">
+            <h2>Watch this video on File Handling</h2>
+            <iframe src="vedios/filehandling.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <!-- Collections Framework Section -->
+        <div class="section">
+            <h2>Collections Framework</h2>
+            <img src="img/collection.jpeg" alt="Collections Framework">
+            <p>Explore Java's powerful Collections Framework to work with data structures like ArrayList, HashMap, and HashSet.</p>
+        </div>
+        <div class="video-section">
+            <h2>Watch this video on Collections Framework</h2>
+            <iframe src="vedios/collectionframework.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <!-- Advanced Programs Section -->
+        <div class="section">
+            
+            <p>Write programs to solve real-world problems like creating a banking system, a library management system, or a simple game.</p>
+            <button onclick="window.location.href='https://www.online-java.com/'">Open Compiler</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 Java Course. All Rights Reserved. | <a href="index.html">Go Back to Home</a></p>
+    </footer>
+</body>
+</html>

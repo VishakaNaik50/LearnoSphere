@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Progress - LearnoSphere</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(to bottom, #ffefba, #ffffff); /* Warm gradient */
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .result-container {
+            padding: 40px;
+            background-color: #ffffff;
+            border-radius: 15px;
+            margin-top: 40px;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: slideDown 1s ease-out;
+        }
+
+        .result-container h2 {
+            font-size: 2.8rem;
+            color: #4a69bd; /* Soft Blue */
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .result-container h3 {
+            font-size: 1.8rem;
+            color: #16a085; /* Teal */
+            margin-top: 20px;
+            font-weight: 600;
+        }
+
+        .progress-bar {
+            width: 80%;
+            height: 30px;
+            margin: 20px auto;
+            background-color: #e1e8ee;
+            border-radius: 25px;
+            position: relative;
+            box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .progress-bar span {
+            display: block;
+            height: 100%;
+            background: linear-gradient(to right, #ff6b6b, #f7b731); /* Gradient for progress */
+            border-radius: 25px;
+            transition: width 0.5s ease-in-out;
+        }
+
+        canvas {
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer {
+            padding: 20px;
+            background-color: #4a69bd;
+            color: white;
+            text-align: center;
+            margin-top: 50px;
+            font-size: 1rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            margin-top: 30px;
+            transition: background 0.3s, transform 0.2s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn:hover {
+            background: linear-gradient(to right, #ff6b6b, #f7b731);
+            transform: translateY(-3px);
+        }
+
+        @keyframes slideDown {
+            0% {
+                transform: translateY(-50%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Progress Container -->
+    <div class="result-container">
+        <h2>Quiz Results</h2>
+        <canvas id="scoreChart" width="400" height="200"></canvas>
+        <div class="progress-bar">
+            <span id="progress-bar-fill"></span>
+        </div>
+        <h3 id="result-message"></h3>
+        <a href="index.html" class="btn">Go to Home</a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 LearnoSphere. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const score = parseFloat(urlParams.get('score'));
+
+        // Update progress bar width
+        const progressBar = document.getElementById('progress-bar-fill');
+        progressBar.style.width = score + "%";
+
+        // Update result message
+        const resultMessage = document.getElementById('result-message');
+        if (score >= 60) {
+            resultMessage.innerHTML = "🎉 Congratulations, you passed! 🎉";
+        } else {
+            resultMessage.innerHTML = "Try again! 💪";
+        }
+
+        // Create the score line chart
+        const ctx = document.getElementById('scoreChart').getContext('2d');
+        const chart = new Chart(ctx, {
+            type: 'line', // Line chart
+            data: {
+                labels: ['Start', 'Your Score', 'Max Score'], // Example labels
+                datasets: [{
+                    label: 'Score Progress',
+                    data: [0, score, 100], // Example data points
+                    backgroundColor: 'rgba(26, 188, 156, 0.2)', // Light fill color
+                    borderColor: 'rgba(26, 188, 156, 1)', // Line color
+                    borderWidth: 2,
+                    fill: true, // Fill under the line
+                    tension: 0.4 // Smooth curve
+                }]
+            },
+            options: {
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Milestones'
+                        }
+                    },
+                    y: {
+                        beginAtZero: true,
+                        max: 100,
+                        title: {
+                            display: true,
+                            text: 'Score (%)'
+                        }
+                    }
+                },
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'top'
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Course</title>
+    <style>
+        /* General styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #e3fdf5, #ffe6fa);
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #4caf50, #81c784);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+            color: #e8f5e9;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #4caf50;
+            margin-bottom: 2rem;
+        }
+
+        .tracks {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .track {
+            width: 300px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .track:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .track img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .track-content {
+            padding: 1rem;
+        }
+
+        .track-content h3 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: #333;
+        }
+
+        .track-content p {
+            margin: 0.5rem 0 0;
+            font-size: 1rem;
+            color: #555;
+        }
+
+        footer {
+            margin-top: 3rem;
+            text-align: center;
+            padding: 2rem;
+            background: linear-gradient(135deg, #4caf50, #388e3c);
+            color: white;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.95rem;
+        }
+
+        footer a {
+            color: #ffcc80;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Python Course</h1>
+        <p>Learn Python through structured and interactive tracks</p>
+    </header>
+
+    <div class="container">
+        <h2>Course Tracks</h2>
+        <div class="tracks">
+            <!-- Beginner Track -->
+            <div class="track" onclick="redirectToPage('beginner.html')">
+                <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt="Beginner Track">
+                <div class="track-content">
+                    <h3>Beginner Track</h3>
+                    <p>Learn Python basics: syntax, variables, and loops.</p>
+                </div>
+            </div>
+
+            <!-- Intermediate Track -->
+            <div class="track" onclick="redirectToPage('python-intermediate.html')">
+                <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt="Intermediate Track">
+                <div class="track-content">
+                    <h3>Intermediate Track</h3>
+                    <p>Build on your Python knowledge with functions and modules.</p>
+                </div>
+            </div>
+
+            <!-- Advanced Track -->
+            <div class="track" onclick="redirectToPage('advanced.html')">
+                <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt="Advanced Track">
+                <div class="track-content">
+                    <h3>Advanced Track</h3>
+                    <p>Master advanced concepts: OOP, algorithms, and more.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 Python Course. All Rights Reserved. | <a href="#">Contact Us</a></p>
+    </footer>
+
+    <script>
+        // JavaScript function to handle redirection
+        function redirectToPage(page) {
+            window.location.href = page;
+        }
+    </script>
+</body>
+</html>

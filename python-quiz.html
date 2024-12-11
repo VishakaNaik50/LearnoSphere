@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Quiz - LearnoSphere</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background: linear-gradient(90deg, #0e76a8, #20b2aa);
+            color: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header .logo {
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .header nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .header nav ul li {
+            margin: 0 15px;
+        }
+
+        .header nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        .header nav ul li a:hover {
+            color: #ffcc00;
+        }
+
+        .quiz-container {
+            padding: 40px;
+            text-align: center;
+            background-color: white;
+            border-radius: 10px;
+            margin: 20px auto;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+        }
+
+        .quiz-container h2 {
+            color: #0e76a8;
+            font-size: 2rem;
+            margin-bottom: 30px;
+        }
+
+        .question {
+            margin-bottom: 25px;
+            text-align: left;
+            font-size: 1.1rem;
+            padding-left: 20px;
+            border-left: 4px solid #0e76a8;
+        }
+
+        .question label {
+            font-weight: bold;
+        }
+
+        .quiz-buttons button {
+            background-color: #0e76a8;
+            color: white;
+            padding: 15px 30px;
+            margin-top: 20px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .quiz-buttons button:hover {
+            background-color: #20b2aa;
+            transform: scale(1.05);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #0e76a8;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .quiz-container {
+                padding: 20px;
+            }
+
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .header nav ul {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .header nav ul li {
+                margin: 5px 0;
+            }
+
+            .quiz-buttons button {
+                padding: 12px 24px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+    <div class="logo">LearnoSphere</div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="quizzes.html">Quizzes</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Quiz Section -->
+<section class="quiz-container">
+    <h2>Python Quiz</h2>
+    <form id="quizForm">
+
+        <!-- Questions will be dynamically inserted here -->
+        <div id="questionContainer"></div>
+
+        <div class="quiz-buttons">
+            <button type="button" id="nextButton" onclick="nextQuestion()">Next</button>
+        </div>
+    </form>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <p>&copy; 2024 LearnoSphere. All rights reserved.</p>
+</footer>
+
+<script>
+    const questions = [
+        { question: "1. What is the output of `print(2 + 2)` in Python?", options: ["4", "22", "2+2"], answer: 0 },
+        { question: "2. How do you create a list in Python?", options: ["[]", "{}", "()"], answer: 0 },
+        { question: "3. What is the output of `print(3 * 2)`?", options: ["6", "32", "Error"], answer: 0 },
+        { question: "4. Which method removes whitespace from both ends of a string?", options: ["strip()", "trim()", "trimspaces()"], answer: 0 },
+        { question: "5. What is the correct way to declare a dictionary in Python?", options: ["dict = {}", "dict = []", "dict = ()"], answer: 0 },
+        { question: "6. Which Python function is used to get the length of a list?", options: ["len()", "length()", "count()"], answer: 0 },
+        { question: "7. What does `range(0, 5)` produce in Python?", options: ["[0, 1, 2, 3, 4]", "[1, 2, 3, 4, 5]", "[0, 1, 2, 3, 4, 5]"], answer: 0 },
+        { question: "8. Which method adds an element to the end of a list?", options: ["append()", "insert()", "add()"], answer: 0 },
+        { question: "9. What is the default value of an uninitialized variable in Python?", options: ["None", "0", "False"], answer: 0 },
+        { question: "10. How do you create a function in Python?", options: ["def function():", "function create() {}", "function = () => {}"], answer: 0 }
+    ];
+
+    let currentQuestionIndex = 0;
+    let correctAnswers = 0;
+
+    function displayQuestion() {
+        const questionContainer = document.getElementById("questionContainer");
+        const questionData = questions[currentQuestionIndex];
+
+        questionContainer.innerHTML = `
+            <div class="question">
+                <label>${questionData.question}</label><br>
+                ${questionData.options.map((option, index) => `
+                    <input type="radio" name="q${currentQuestionIndex}" value="${index}"> ${option}<br>
+                `).join('')}
+            </div>
+        `;
+    }
+
+    function nextQuestion() {
+        const selectedOption = document.querySelector(`input[name="q${currentQuestionIndex}"]:checked`);
+        if (selectedOption && parseInt(selectedOption.value) === questions[currentQuestionIndex].answer) {
+            correctAnswers++;
+        }
+
+        currentQuestionIndex++;
+        if (currentQuestionIndex < questions.length) {
+            displayQuestion();
+        } else {
+            const score = (correctAnswers / questions.length) * 100;
+            window.location.href = `progress.html?score=${score}`;
+        }
+    }
+
+    // Initialize the first question
+    displayQuestion();
+</script>
+
+</body>
+</html>

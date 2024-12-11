@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beginner Track</title>
+    <style>
+        /* Add your existing CSS here */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #e3fdf5, #ffe6fa);
+            color: #333;
+        }
+        header, .content, footer {
+            max-width: 1000px;
+            margin: auto;
+        }
+        header {
+            text-align: center;
+            background: linear-gradient(135deg, #4caf50, #81c784);
+            color: white;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        .code-section {
+            margin: 2rem 0;
+            padding: 1rem;
+            background: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        #output {
+            margin-top: 1rem;
+            padding: 1rem;
+            background: #e8f5e9;
+            border: 1px solid #4caf50;
+            border-radius: 5px;
+            font-family: monospace;
+            color: #333;
+        }
+        button {
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            border: none;
+            background-color: #4caf50;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        button:hover {
+            background-color: #388e3c;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Beginner Track</h1>
+        <p>Learn Python basics to kickstart your programming journey.</p>
+    </header>
+
+    <div class="content">
+        <div class="code-section">
+            <h2>Try Running Your Python Code</h2>
+            <textarea id="code" rows="10" style="width: 100%; font-family: monospace;" placeholder="Write your Python code here..."></textarea>
+            <button onclick="runPythonCode()">Run Code</button>
+            <div id="output">Output will appear here...</div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 Python Course. All Rights Reserved. | <a href="python.html">Go Back to Home</a></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/skulpt/dist/skulpt.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/skulpt/dist/skulpt-stdlib.js"></script>
+    <script>
+        function outf(text) {
+            document.getElementById("output").innerHTML += text + "<br>";
+        }
+
+        function runPythonCode() {
+            let outputElement = document.getElementById("output");
+            outputElement.innerHTML = ""; // Clear previous output
+            let code = document.getElementById("code").value;
+
+            Sk.configure({ output: outf, read: builtinRead });
+            try {
+                Sk.importMainWithBody("<stdin>", false, code, true);
+            } catch (err) {
+                outputElement.innerHTML = "Error: " + err.toString();
+            }
+        }
+
+        function builtinRead(x) {
+            if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined) {
+                throw "File not found: '" + x + "'";
+            }
+            return Sk.builtinFiles["files"][x];
+        }
+    </script>
+</body>
+</html>
